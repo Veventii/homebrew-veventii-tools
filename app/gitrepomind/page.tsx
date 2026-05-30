@@ -238,14 +238,48 @@ Recent commits where both files changed together:
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Because your source code is private, the most secure and robust way to feed coupling context to AI coding models is through an <strong>Agent Skill</strong>. Proactive AI agents (such as <strong>Antigravity, Kiro, Codex, OpenCode, Cloud Code, and Claude Desktop</strong>) possess terminal tools and can run the <code>gitrepomind</code> CLI directly inside your active local workspace CWD.
+              Because your source code is private, the most secure and robust way to feed coupling context to AI coding models is through local execution. Proactive AI agents (such as <strong>Antigravity, Kiro, Codex, OpenCode, Cloud Code, and Claude Desktop</strong>) possess terminal tools and can execute the <code>gitrepomind</code> CLI directly inside your active local workspace.
             </p>
 
             <div className="space-y-4">
+              
+              {/* Setup Skill Command */}
               <div className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
-                <h4 className="text-sm font-semibold text-purple-300">Workspace Prompt & Rule Setup</h4>
+                <h4 className="text-sm font-semibold text-purple-300">Automatic Rule Prompt Setup</h4>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Copy and paste the directive below into your project's custom system rules (e.g. <code>.cursorrules</code>, <code>.clinerules</code>, <code>.windsurfrules</code>, <code>.github/prompts/gitrepomind.prompt</code>, or your agent system instructions):
+                  Instead of copying and pasting rules manually, GitRepoMind includes a dedicated command to automatically register the Agent Skill rules in your repository workspace:
+                </p>
+                <InstallCommand command="gitrepomind setup-skill" />
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  This command immediately creates pre-configured <code>.cursorrules</code>, <code>.clinerules</code>, <code>.windsurfrules</code>, <code>.roomodes</code>, and <code>.github/prompts/gitrepomind.prompt</code> workspace prompt files.
+                </p>
+              </div>
+
+              {/* Sub-Resource Downloads */}
+              <div className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
+                <h4 className="text-sm font-semibold text-purple-300">Agent Skill Sub-Resources</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  The Agent Skill and its fallback setup guide are available as standalone sub-resources. You can point your AI agents directly to these files, or let the agent read the local fallback if the CLI is not yet installed:
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold" asChild>
+                    <a href="/homebrew-veventii-tools/skills/GitRepoMind/SKILL.md" target="_blank" rel="noopener noreferrer">
+                      View Deployed SKILL.md
+                    </a>
+                  </Button>
+                  <Button size="sm" variant="outline" className="border-border hover:bg-muted text-xs text-zinc-300" asChild>
+                    <a href="/homebrew-veventii-tools/skills/GitRepoMind/INSTALL.md" target="_blank" rel="noopener noreferrer">
+                      View Deployed INSTALL.md
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Skill Instructions Card */}
+              <div className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
+                <h4 className="text-sm font-semibold text-purple-300">Manual Workspace Prompt & Rules</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  If you prefer to configure your agent's system instructions manually, copy and paste the official Agent Skill directive below:
                 </p>
                 
                 <div className="rounded-lg border bg-zinc-950 font-mono text-xs p-4 text-emerald-400 leading-relaxed overflow-x-auto shadow-inner space-y-2">
