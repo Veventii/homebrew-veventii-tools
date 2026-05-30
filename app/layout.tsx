@@ -78,10 +78,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-96x96.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/homebrew-veventii-tools/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/homebrew-veventii-tools/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/homebrew-veventii-tools/favicon-96x96.png" />
+        <link rel="manifest" href="/homebrew-veventii-tools/site.webmanifest" />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="apple-mobile-web-app-title" content="Veventii" />

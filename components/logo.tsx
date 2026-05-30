@@ -5,7 +5,8 @@ import { useTheme } from 'next-themes';
 
 export function Logo() {
   const { resolvedTheme } = useTheme()
-  const logo = resolvedTheme === 'dark' ? '/veventii-logo-dark.svg' : '/veventii-logo.svg'
+  const basePath = '/homebrew-veventii-tools';
+  const logo = resolvedTheme === 'dark' ? `${basePath}/veventii-logo-dark.svg` : `${basePath}/veventii-logo.svg`
 return <Image
                   src={logo}
                   width={592}
