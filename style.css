@@ -134,17 +134,18 @@ header {
   align-items: center;
 }
 
-/* Inline SVG Logo Styling */
+/* Inline SVG Logo Styling (Pure White Variant for Dark BG) */
 .logo-svg {
   width: 140px;
   height: auto;
-  color: var(--text-main);
+  color: #ffffff !important;
+  fill: #ffffff !important;
   transition: var(--transition-smooth);
 }
 
 .logo-svg:hover {
   transform: scale(1.02);
-  color: #fff;
+  opacity: 0.9;
 }
 
 .github-link {
@@ -647,7 +648,8 @@ footer {
 .footer-logo-svg {
   width: 130px;
   height: auto;
-  color: var(--text-main);
+  color: #ffffff !important;
+  fill: #ffffff !important;
   margin-bottom: 1.15rem;
 }
 
