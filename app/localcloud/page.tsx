@@ -263,6 +263,82 @@ WantedBy=default.target`}</pre>
           </CardContent>
         </Card>
 
+        {/* Section 6 */}
+        <Card className="relative overflow-hidden border-teal-500/30 bg-teal-500/5 hover:border-teal-500/40 transition-all duration-300">
+          <CardHeader>
+            <div className="flex items-center gap-2 text-teal-400 font-semibold text-xs tracking-wider uppercase mb-1">
+              <Cpu className="h-4 w-4" /> Agentic AI Superpower
+            </div>
+            <CardTitle className="text-xl">
+              06. AI Coding Agent Skill Integration
+            </CardTitle>
+            <CardDescription className="text-xs">
+              Equip advanced AI Coding Agents with the orchestration capabilities of LocalCloud.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              When building modern multi-service applications, AI coding models often need to manage, inspect, and restart background server dependencies. Through a dedicated **Agent Skill**, proactive AI agents (like <strong>Antigravity, Kiro, Codex, OpenCode, Cloud Code, and Claude Desktop</strong>) can execute `localcloudctl` commands directly inside your local environment.
+            </p>
+
+            <div className="space-y-4">
+              <div className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
+                <h4 className="text-sm font-semibold text-teal-300">Workspace Prompt & Rule Setup</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  To give your coding agents permission and instructions to use LocalCloud, copy and paste the directive below into your system rules (e.g. <code>.cursorrules</code>, <code>.clinerules</code>, or workspace settings):
+                </p>
+                
+                <div className="rounded-lg border bg-zinc-950 font-mono text-xs p-4 text-emerald-400 leading-relaxed overflow-x-auto shadow-inner space-y-2">
+                  <span className="text-[10px] font-bold text-teal-400 uppercase tracking-widest block select-none">Skill Prompts for Agents</span>
+                  <pre className="text-zinc-300 whitespace-pre-wrap select-all">{`# LocalCloud Agent Skill Instructions
+You are equipped with LocalCloud, a lightweight local development orchestrator and reverse proxy daemon (\`localcloudd\`) controlled via the CLI (\`localcloudctl\`).
+
+## Instructions
+1. **Explore Active Services**:
+   When working in a workspace that uses multiple local service dependencies, proactively inspect the status of your configured services:
+   $ localcloudctl ls
+
+2. **Check Process Threads & CPU Usage**:
+   To see currently active sub-processes and thread statuses managed by the proxy:
+   $ localcloudctl ps
+
+3. **Manage Service States**:
+   - Start/warm up an app manually before routing test scripts:
+     $ localcloudctl start <app_alias>
+   - Stop/sleep a running service to reclaim resources:
+     $ localcloudctl kill <app_alias>
+   - Hot-reload configurations after modifying \`localcloud.toml\`:
+     $ localcloudctl reload
+
+4. **Debugging Logs**:
+   To inspect or tail local service logs:
+   $ localcloudctl logs <app_alias>
+
+5. **Sanity Check & Network Diagnostics**:
+   - Audit the local environment (configs, system services):
+     $ localcloudctl doctor
+   - Verify host-level loopback DNS rules:
+     $ localcloudctl hosts check
+
+6. **Fallback Installation**:
+   If the \`localcloudctl\` or \`localcloudd\` command is not found or fails with an installation/missing error, only then should you read the LocalCloud installation guide to assist the developer:
+   - Link: https://veventii.github.io/homebrew-veventii-tools/#tap-install
+   - Local Guide: [INSTALL.md](file:///Users/milindu/Projects/Veventii/homebrew-veventii-tools/skills/LocalCloud/INSTALL.md)`}</pre>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-xl border border-border bg-card/60">
+                <h4 className="text-sm font-semibold mb-2 text-teal-300">How Agents Leverage the Skill</h4>
+                <ul className="list-disc pl-4 text-xs text-muted-foreground space-y-2 leading-relaxed">
+                  <li><strong>Proactive Orchestration</strong>: Instead of asking you to manually start servers, the agent inspects status via <code>localcloudctl ls</code> and starts required dependencies dynamically.</li>
+                  <li><strong>Active Monitoring</strong>: Agents tail live runtime logs via <code>localcloudctl logs &lt;alias&gt;</code> to diagnose startup crashes or port collisions.</li>
+                  <li><strong>Offline Sovereignty</strong>: Operates entirely locally using direct CLI execution, avoiding heavy, unverified third-party cloud connections.</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );
