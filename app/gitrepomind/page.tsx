@@ -227,42 +227,53 @@ Recent commits where both files changed together:
         <Card className="relative overflow-hidden border-purple-500/30 bg-purple-500/5 hover:border-purple-500/40 transition-all duration-300">
           <CardHeader>
             <div className="flex items-center gap-2 text-purple-400 font-semibold text-xs tracking-wider uppercase mb-1">
-              <Sparkles className="h-4 w-4" /> AI Superpower
+              <Sparkles className="h-4 w-4" /> Agentic AI Superpower
             </div>
             <CardTitle className="text-xl">
-              05. AI Coding Assistant Skill Integration
+              05. AI Coding Agent Skill Integration
             </CardTitle>
             <CardDescription className="text-xs">
-              Configure Cursor, Windsurf, Roo Code, or Cline to leverage local-first coupling context dynamically.
+              Equip advanced AI Coding Agents with the logical coupling intelligence of GitRepoMind.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Since your source codebase is kept private, you can feed GitRepoMind instructions directly into AI coding tools as an <strong>Agent Skill</strong>. When an agent works on your code, it runs the CLI commands locally in your CWD to perform pre-commit audits.
+              Because your source code is private, the most secure and robust way to feed coupling context to AI coding models is through an <strong>Agent Skill</strong>. Proactive AI agents (such as <strong>Antigravity, Kiro, Codex, OpenCode, Cloud Code, and Claude Desktop</strong>) possess terminal tools and can run the <code>gitrepomind</code> CLI directly inside your active local workspace CWD.
             </p>
 
             <div className="space-y-4">
-              <div className="p-4 rounded-xl border border-border bg-card/60">
-                <h4 className="text-sm font-semibold mb-2 text-purple-300">Cursor / Windsurf Setup</h4>
-                <ol className="list-decimal pl-4 text-xs text-muted-foreground space-y-2 leading-relaxed">
-                  <li>Navigate to <strong>Settings</strong> &gt; <strong>Features</strong> &gt; <strong>MCP</strong>.</li>
-                  <li>Click <strong>+ Add New MCP Tool</strong>.</li>
-                  <li>Configure:
-                    <ul className="list-disc pl-4 mt-1 space-y-1">
-                      <li><strong>Name</strong>: <code>gitrepomind</code></li>
-                      <li><strong>Type</strong>: <code>command</code></li>
-                      <li><strong>Command</strong>: <code>gitrepomind serve</code></li>
-                    </ul>
-                  </li>
-                </ol>
+              <div className="p-4 rounded-xl border border-border bg-card/60 space-y-3">
+                <h4 className="text-sm font-semibold text-purple-300">Workspace Prompt & Rule Setup</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Copy and paste the directive below into your project's custom system rules (e.g. <code>.cursorrules</code>, <code>.clinerules</code>, <code>.windsurfrules</code>, <code>.github/prompts/gitrepomind.prompt</code>, or your agent system instructions):
+                </p>
+                
+                <div className="rounded-lg border bg-zinc-950 font-mono text-xs p-4 text-emerald-400 leading-relaxed overflow-x-auto shadow-inner space-y-2">
+                  <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest block select-none">Skill Prompts for Agents</span>
+                  <pre className="text-zinc-300 whitespace-pre-wrap select-all">{`# GitRepoMind Agent Skill Instructions
+You are equipped with GitRepoMind, a local-first Git logical coupling CLI engine that scans commit history to predict related file co-changes.
+
+## Instructions
+1. Before proposing or writing any multi-file code changes, proactively query GitRepoMind's logical coupling context by executing this CLI command in your active workspace CWD:
+   $ gitrepomind remind -f <current_file_path> -k 5
+
+2. Once you are done making changes and before completing your task, perform a pre-flight sanity audit to make sure you didn't overlook any related files (such as OpenAPI schemas, tests, documentation, or spec changes):
+   $ gitrepomind remind --uncommitted
+
+3. Fallback Installation:
+   If the \`gitrepomind\` command is not found or fails with an installation/missing error, only then should you read the GitRepoMind installation guide to assist the developer:
+   - Link: https://veventii.github.io/homebrew-veventii-tools/#tap-install
+   - Local Guide: [INSTALL.md](file:///Users/milindu/Projects/Veventii/homebrew-veventii-tools/public/site.webmanifest)`}</pre>
+                </div>
               </div>
 
               <div className="p-4 rounded-xl border border-border bg-card/60">
-                <h4 className="text-sm font-semibold mb-2 text-purple-300">Roo Code / Cline Directive</h4>
-                <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-                  Instruct your AI agent to act on your workspace by copying this directive into your system instructions or custom rules:
-                </p>
-                <InstallCommand command="When writing code, proactively use `gitrepomind remind -f <file>` to gather surrounding file coupling context. Before presenting changes, run `gitrepomind remind --uncommitted` to verify no related files (like tests or specs) were overlooked." />
+                <h4 className="text-sm font-semibold mb-2 text-purple-300">How Agents Leverage the Skill</h4>
+                <ul className="list-disc pl-4 text-xs text-muted-foreground space-y-2 leading-relaxed">
+                  <li><strong>Proactive Retrieval</strong>: The agent runs a quick query in under 50ms and reads the co-change history candidates.</li>
+                  <li><strong>Zero-Configuration</strong>: No global daemons or registry setups to configure or troubleshoot. The agent relies directly on the standard compiled CLI executable.</li>
+                  <li><strong>Conditional Fallback</strong>: If the agent detects that the CLI is missing from the environment, it gracefully catches the error and reads the provided public URL to guide the user on how to run <code>brew install gitrepomind</code>.</li>
+                </ul>
               </div>
             </div>
           </CardContent>
