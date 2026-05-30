@@ -35,6 +35,71 @@ export default function GitRepoMindDocs() {
         </p>
       </div>
 
+      {/* What is GitRepoMind & Key Benefits Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <Card className="border-border bg-card/60 backdrop-blur-md relative overflow-hidden flex flex-col hover:border-purple-500/20 transition-all duration-300">
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-purple-400" />
+          <CardHeader>
+            <CardTitle className="text-xl flex items-center gap-2 text-zinc-100">
+              What is GitRepoMind?
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 flex-1">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <strong>GitRepoMind</strong> is a fast, local-first code intelligence engine that learns file co-change relationships directly from your Git commit history.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Have you ever updated a backend service file and forgot to update its corresponding test suite, translation file, or API documentation? GitRepoMind solves this.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              By analyzing how files have historically changed together in your commits, GitRepoMind instantly predicts and suggests overlooked updates in your workspace with zero cloud dependencies.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-border bg-card/60 backdrop-blur-md relative overflow-hidden flex flex-col hover:border-teal-500/20 transition-all duration-300">
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-teal-500 to-teal-400" />
+          <CardHeader>
+            <CardTitle className="text-xl flex items-center gap-2 text-zinc-100">
+              Key Benefits
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 flex-1">
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <div className="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 shrink-0 h-9 w-9 flex items-center justify-center font-bold text-sm">1</div>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-semibold text-zinc-200">Catch Forgotten File Updates</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Compilers only catch syntax errors. GitRepoMind tells you: <em>&quot;Hey, developers usually update the OpenAPI spec whenever they edit this controller!&quot;</em>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <div className="p-2 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-400 shrink-0 h-9 w-9 flex items-center justify-center font-bold text-sm">2</div>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-semibold text-zinc-200">Supercharge AI Coding Assistants</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Feed local-first logical coupling context directly to AI tools (Cursor, Roo Code, Cline) to ensure complete, robust multi-file code generations.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <div className="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 shrink-0 h-9 w-9 flex items-center justify-center font-bold text-sm">3</div>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-semibold text-zinc-200">Non-Intrusive & Blazing Fast</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Written in Rust, it analyzes over 100,000 commits in seconds, runs silently via Git hooks, and queries results in under 50 milliseconds with zero lag.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       {/* Main content grid/list */}
       <div className="space-y-8">
         
