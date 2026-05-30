@@ -263,7 +263,7 @@ You are equipped with GitRepoMind, a local-first Git logical coupling CLI engine
 3. Fallback Installation:
    If the \`gitrepomind\` command is not found or fails with an installation/missing error, only then should you read the GitRepoMind installation guide to assist the developer:
    - Link: https://veventii.github.io/homebrew-veventii-tools/#tap-install
-   - Local Guide: [INSTALL.md](file:///Users/milindu/Projects/Veventii/homebrew-veventii-tools/public/site.webmanifest)`}</pre>
+   - Local Guide: [INSTALL.md](file:///Users/milindu/Projects/Veventii/homebrew-veventii-tools/skills/GitRepoMind/INSTALL.md)`}</pre>
                 </div>
               </div>
 
