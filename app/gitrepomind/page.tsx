@@ -146,13 +146,12 @@ export default function GitRepoMindDocs() {
                 <InstallCommand command="gitrepomind remind --uncommitted" />
                 <div className="mt-3 rounded-lg border bg-zinc-950 font-mono text-xs p-4 text-emerald-400 leading-relaxed overflow-x-auto shadow-inner">
                   <pre>{`Detected:
-  src/main.rs
+  src/controllers/user_controller.rs
 
 Suggested:
-   80% src/cli.rs
-   60% src/graph.rs
-   40% Cargo.toml
-   20% README.md`}</pre>
+   90% docs/openapi.yaml
+   80% tests/e2e/user_e2e_test.rs
+   70% tests/unit/user_controller_test.rs`}</pre>
                 </div>
               </div>
 
