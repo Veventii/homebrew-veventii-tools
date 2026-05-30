@@ -141,6 +141,68 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* AI Agent Skill Showcase Section */}
+      <section className="container mx-auto px-4 py-24 border-t border-border bg-card/10 relative overflow-hidden">
+        <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] rounded-full bg-purple-500/5 blur-[120px] pointer-events-none -z-10" />
+        
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <Badge variant="secondary" className="px-3 py-1 text-xs uppercase tracking-wider font-semibold border-purple-500/30 text-purple-400 bg-purple-500/5">
+              Agentic AI Integration
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading leading-tight text-zinc-100">
+              Ship Context Directly <br />
+              <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+                To Your Coding Agents
+              </span>
+            </h2>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Because your source code is private, GitRepoMind runs entirely offline in your active workspace. Proactive AI agents can natively execute the local CLI to perform pre-commit audits and gather surrounding file coupling context.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Supported out-of-the-box by advanced agent systems: 
+              <strong className="text-zinc-200 block mt-1.5 font-medium">
+                Antigravity, Kiro, Codex, OpenCode, Cloud Code, Claude Desktop, and more.
+              </strong>
+            </p>
+            
+            <div className="flex flex-wrap gap-4 pt-2">
+              <Button className="bg-purple-600 hover:bg-purple-500 text-white font-medium flex items-center justify-center gap-2" asChild>
+                <a href="/homebrew-veventii-tools/skills/GitRepoMind/SKILL.md" target="_blank" rel="noopener noreferrer">
+                  View Deployed SKILL.md
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="outline" className="border-border hover:bg-muted" asChild>
+                <Link href="/gitrepomind">
+                  Read Agent Guide
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="space-y-4 rounded-xl border border-zinc-800 bg-[#0d0d11] p-6 shadow-2xl relative">
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-teal-500" />
+            <div className="flex items-center gap-1.5 mb-2 select-none">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+              <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+              <span className="text-[10px] text-zinc-500 font-mono ml-2">Terminal</span>
+            </div>
+            
+            <h4 className="text-sm font-semibold text-zinc-200">1. Install and Initialize globally</h4>
+            <InstallCommand command="brew install gitrepomind" />
+            
+            <h4 className="text-sm font-semibold text-zinc-200 pt-2">2. Autoconfigure rule prompts in your repo</h4>
+            <InstallCommand command="gitrepomind setup-skill" />
+            
+            <p className="text-[11px] text-zinc-500 leading-relaxed font-mono mt-2">
+              This subcommand automatically creates <code>.cursorrules</code>, <code>.clinerules</code>, <code>.windsurfrules</code>, and <code>.github/prompts/gitrepomind.prompt</code> files in your workspace root, pre-configured with the agent instructions.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
