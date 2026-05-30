@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veventii Developer Tools</title>
+  <meta name="description" content="Premium, local-first developer utilities and command-line engines designed to supercharge engineering workflows.">
+  
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Modern Iconography -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-icon">V</div>
+        <span class="logo-text">Veventii</span>
+      </div>
+      <a href="https://github.com/Veventii/homebrew-veventii-tools" class="github-link" target="_blank">
+        <i data-lucide="github"></i>
+        <span>GitHub Tap</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="badge">Veventii Tool Suite</div>
+      <h1>Supercharge Your <span class="gradient-text">Local Workflows</span></h1>
+      <p class="subtitle">Highly optimized, privacy-first command-line engines and intelligence utilities designed for modern developers and AI agents.</p>
+      
+      <!-- General Installation Block -->
+      <div class="terminal-install">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">Quick Start Tap</span>
+        </div>
+        <div class="terminal-body">
+          <span class="prompt">$</span>
+          <code id="tap-command">brew tap Veventii/veventii-tools</code>
+          <button class="copy-btn" onclick="copyTapCommand()" aria-label="Copy tap command">
+            <i data-lucide="copy" id="copy-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="tools" id="tools">
+    <div class="container">
+      <h2 class="section-title">The Tool Suite</h2>
+      <p class="section-subtitle">A collection of premium utility formulas available in the Veventii Homebrew Tap.</p>
+      
+      <div class="tools-grid">
+        
+        <!-- TOOL 1: GitRepoMind -->
+        <article class="tool-card featured">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="tool-icon-wrapper">
+              <i data-lucide="brain-circuit" class="tool-icon"></i>
+            </div>
+            <div class="tool-meta">
+              <span class="card-badge">Featured Tool</span>
+              <h3>GitRepoMind</h3>
+            </div>
+          </div>
+          <p class="tool-desc">
+            A fast, local-first code intelligence engine that learns file co-change relationships from your Git history to predict and suggest overlooked updates before you commit.
+          </p>
+          
+          <div class="tool-features">
+            <div class="feature-item">
+              <i data-lucide="shield-check"></i>
+              <span>100% Offline & Private</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="zap"></i>
+              <span>Calculated in < 50ms</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="bot"></i>
+              <span>AI Agent Skill Ready</span>
+            </div>
+          </div>
+
+          <div class="tool-install-box">
+            <span class="install-prompt">brew install gitrepomind</span>
+            <button class="install-copy-btn" onclick="copyInstallCommand('brew install gitrepomind', this)" aria-label="Copy install command">
+              <i data-lucide="copy"></i>
+            </button>
+          </div>
+          
+          <div class="card-footer">
+            <a href="https://github.com/Veventii/GitRepoMind" class="btn-primary" target="_blank">
+              <i data-lucide="book-open"></i>
+              <span>Documentation</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Placeholder for Future Additions -->
+        <article class="tool-card placeholder">
+          <div class="placeholder-content">
+            <div class="placeholder-icon-wrapper">
+              <i data-lucide="plus-circle" class="placeholder-icon"></i>
+            </div>
+            <h3>Future Additions</h3>
+            <p>More premium developer utilities, local AI integrations, and workflow orchestrators are actively under development.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2026 Veventii. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Veventii/homebrew-veventii-tools" target="_blank">GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Copy Quick Start Tap Command
+    function copyTapCommand() {
+      const commandText = "brew tap Veventii/veventii-tools";
+      navigator.clipboard.writeText(commandText).then(() => {
+        const copyIcon = document.getElementById("copy-icon");
+        copyIcon.setAttribute("data-lucide", "check");
+        lucide.createIcons();
+        
+        setTimeout(() => {
+          copyIcon.setAttribute("data-lucide", "copy");
+          lucide.createIcons();
+        }, 2000);
+      });
+    }
+
+    // Copy specific tool install command
+    function copyInstallCommand(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        const icon = btnElement.querySelector("i");
+        icon.setAttribute("data-lucide", "check");
+        btnElement.classList.add("copied");
+        lucide.createIcons();
+
+        setTimeout(() => {
+          icon.setAttribute("data-lucide", "copy");
+          btnElement.classList.remove("copied");
+          lucide.createIcons();
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
