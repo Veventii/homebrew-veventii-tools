@@ -11,9 +11,9 @@
 
   /* Premium Space Dark Color Scheme matching Veventii.com */
   --bg-main: #060913;
-  --bg-card: rgba(13, 20, 38, 0.6);
-  --bg-card-hover: rgba(17, 27, 50, 0.75);
-  --border-color: rgba(255, 255, 255, 0.06);
+  --bg-card: rgba(13, 20, 38, 0.65);
+  --bg-card-hover: rgba(17, 27, 50, 0.8);
+  --border-color: rgba(255, 255, 255, 0.07);
   --border-hover: rgba(157, 78, 221, 0.35);
   
   /* Primary HSL Accent Colors */
@@ -212,7 +212,7 @@ header {
 /* Premium Terminal Installation Component */
 .terminal-install {
   width: 100%;
-  max-width: 440px;
+  max-width: 540px; /* Wider for dual command */
   background: rgba(10, 15, 28, 0.9);
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -269,7 +269,7 @@ header {
   justify-content: space-between;
   gap: 1rem;
   font-family: Menlo, Monaco, Consolas, monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .prompt {
@@ -300,21 +300,8 @@ header {
 
 /* Tools Section Styling */
 .tools {
-  padding: 4rem 0 7rem;
+  padding: 4rem 0 5rem;
   position: relative;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--text-muted);
-  margin-bottom: 3.5rem;
-  font-size: 1rem;
 }
 
 /* Single-Column Centered Tool Container */
@@ -333,7 +320,7 @@ header {
   border-radius: 16px;
   padding: 2.5rem;
   width: 100%;
-  max-width: 580px; /* Perfect centered card width */
+  max-width: 720px; /* Wider card to introduce more details */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -343,10 +330,9 @@ header {
 }
 
 .tool-card:hover {
-  transform: translateY(-6px);
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.4), 0 0 25px var(--text-glow);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 0 0 20px var(--text-glow);
 }
 
 /* Featured Card Top border styling */
@@ -397,7 +383,7 @@ header {
 }
 
 .tool-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.2;
 }
 
@@ -421,69 +407,219 @@ header {
 
 .feature-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.65rem;
   font-size: 0.85rem;
   color: var(--text-main);
+  line-height: 1.5;
 }
 
 .feature-item i {
   color: var(--accent-secondary);
   width: 1rem;
   height: 1rem;
+  margin-top: 0.15rem;
 }
 
-/* Tool Card Installation Block */
-.tool-install-box {
-  background: rgba(10, 15, 28, 0.6);
+/* -------------------------------------------------------------
+ * Premium Documentation Section
+ * ------------------------------------------------------------- */
+.docs-section {
+  padding: 5rem 0 7rem;
+  background: rgba(10, 15, 28, 0.3);
+  border-top: 1px solid var(--border-color);
+}
+
+.docs-container {
+  max-width: 820px; /* Centered content readability */
+  margin: 0 auto;
+}
+
+.docs-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.docs-header-icon {
+  color: var(--accent-secondary);
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.docs-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.docs-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Documentation Content Cards */
+.doc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.doc-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-main);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.75rem;
+}
+
+.doc-card h4 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.doc-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+/* Modern Quote/Note Callouts */
+.info-note {
+  border-left: 3px solid var(--accent-primary);
+  background: rgba(157, 78, 221, 0.05);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem !important;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+
+.info-note strong {
+  color: var(--text-main);
+}
+
+/* High-End Code Editor Blocks */
+.code-block-wrapper {
+  position: relative;
+  background: #03050a;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.75rem;
-  font-family: Menlo, Monaco, monospace;
-  font-size: 0.85rem;
-  color: #34d399;
+  margin: 1rem 0 1.5rem;
+  overflow: hidden;
 }
 
-.install-copy-btn {
+.code-block-wrapper pre {
+  padding: 1.15rem 1.5rem;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code-block-wrapper code {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  color: #34d399; /* Smooth Neon Green code */
   background: transparent;
-  border: none;
+  padding: 0;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
   color: var(--text-muted);
   cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 6px;
   transition: var(--transition-smooth);
 }
 
-.install-copy-btn:hover {
+.code-copy-btn:hover {
   color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn-primary {
+/* Custom code output preview block */
+.code-output-block {
+  background: #0b0f19;
+  border-left: 4px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  color: #a7f3d0;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+}
+
+.code-output-block pre {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* AI Highlight Accent Cards */
+.accent-card {
+  border-color: var(--border-hover) !important;
+  box-shadow: 0 10px 30px rgba(157, 78, 221, 0.1) !important;
+  position: relative;
+}
+
+.accent-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 0.8rem 1.5rem;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
-  color: var(--text-main);
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 4px 12px rgba(157, 78, 221, 0.15);
-  transition: var(--transition-smooth);
-  position: relative;
-  z-index: 2;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 0.3rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #ae6cf0, var(--accent-primary));
-  box-shadow: 0 8px 18px rgba(157, 78, 221, 0.3);
+.skill-intro {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: var(--text-main) !important;
+}
+
+.guide-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.guide-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.guide-item ol {
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.guide-item li {
+  margin-bottom: 0.5rem;
 }
 
 /* Professional Footer matching veventii.com styling */
@@ -574,12 +710,20 @@ footer {
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   
   .subtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .tool-card {
+    padding: 1.75rem;
+  }
+
+  .doc-card {
+    padding: 1.75rem;
   }
 
   .footer-container {

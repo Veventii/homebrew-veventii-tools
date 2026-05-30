@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veventii Developer Tools</title>
-  <meta name="description" content="Premium, local-first developer utilities and command-line engines designed to supercharge engineering workflows.">
+  <title>Veventii Developer Tools - GitRepoMind</title>
+  <meta name="description" content="Official documentation and Homebrew installation portal for GitRepoMind—the local-first, privacy-focused Git history coupling engine.">
   
   <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,9 +45,9 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-container">
-      <div class="badge">Veventii Tool Suite</div>
-      <h1>Supercharge Your <span class="gradient-text">Local Workflows</span></h1>
-      <p class="subtitle">Highly optimized, privacy-first command-line engines and intelligence utilities designed for modern developers and AI agents.</p>
+      <div class="badge">Veventii Tools</div>
+      <h1>Predict & Prevent <br><span class="gradient-text">Forgotten Code Updates</span></h1>
+      <p class="subtitle">A local-first, privacy-focused Git history coupling engine. Find related files in your workspace in less than 50 milliseconds.</p>
       
       <!-- General Installation Block -->
       <div class="terminal-install">
@@ -57,11 +57,11 @@
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <span class="terminal-title">Quick Start Tap</span>
+          <span class="terminal-title">Homebrew Tap Installation</span>
         </div>
         <div class="terminal-body">
           <span class="prompt">$</span>
-          <code id="tap-command">brew tap Veventii/veventii-tools</code>
+          <code id="tap-command">brew tap Veventii/veventii-tools && brew install gitrepomind</code>
           <button class="copy-btn" onclick="copyTapCommand()" aria-label="Copy tap command">
             <i data-lucide="copy" id="copy-icon"></i>
           </button>
@@ -70,15 +70,12 @@
     </div>
   </section>
 
-  <!-- Tools Section -->
+  <!-- Showcase & Overview Card -->
   <section class="tools" id="tools">
     <div class="container">
-      <h2 class="section-title">The Tool Suite</h2>
-      <p class="section-subtitle">A collection of premium utility formulas available in the Veventii Homebrew Tap.</p>
-      
       <div class="tools-single-container">
         
-        <!-- TOOL 1: GitRepoMind (Centered Single-Column Layout) -->
+        <!-- TOOL CARD: GitRepoMind -->
         <article class="tool-card featured">
           <div class="card-glow"></div>
           <div class="card-header">
@@ -86,44 +83,164 @@
               <i data-lucide="brain-circuit" class="tool-icon"></i>
             </div>
             <div class="tool-meta">
-              <span class="card-badge">Featured Tool</span>
+              <span class="card-badge">Logical Coupling Graph Engine</span>
               <h3>GitRepoMind</h3>
             </div>
           </div>
           <p class="tool-desc">
-            A fast, local-first code intelligence engine that learns file co-change relationships from your Git history to predict and suggest overlooked updates before you commit.
+            GitRepoMind analyzes your local repository's commit history to establish which files are logically coupled (frequently modified together). By matching uncommitted or staged changes against this graph, it predicts forgotten updates (like tests, API specs, translation files, or mocks) before they make it to a commit.
           </p>
           
           <div class="tool-features">
             <div class="feature-item">
               <i data-lucide="shield-check"></i>
-              <span>100% Offline & Private (Local SQLite Graph)</span>
+              <span><strong>100% Offline & Private:</strong> Runs locally on an embedded Redb database in your <code>.git/</code> directory.</span>
             </div>
             <div class="feature-item">
               <i data-lucide="zap"></i>
-              <span>Calculated dynamically in < 50ms</span>
+              <span><strong>Speed Optimized:</strong> Walks topological history and resolves complex queries in under 50 milliseconds.</span>
             </div>
             <div class="feature-item">
               <i data-lucide="bot"></i>
-              <span>AI Coding Assistant Skill Ready</span>
+              <span><strong>AI Coding Assistant Ready:</strong> Integrated cleanly as a highly effective Agent Skill.</span>
             </div>
           </div>
 
-          <div class="tool-install-box">
-            <span class="install-prompt">brew install gitrepomind</span>
-            <button class="install-copy-btn" onclick="copyInstallCommand('brew install gitrepomind', this)" aria-label="Copy install command">
-              <i data-lucide="copy"></i>
-            </button>
-          </div>
-          
-          <div class="card-footer">
-            <a href="https://github.com/Veventii/GitRepoMind" class="btn-primary" target="_blank">
+          <div class="card-footer" style="margin-top: 1.5rem;">
+            <a href="#docs" class="btn-primary">
               <i data-lucide="book-open"></i>
-              <span>Documentation</span>
+              <span>Explore Full Documentation & Guide</span>
             </a>
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPANSIVE DOCUMENTATION SECTION (README replacer for private repo) -->
+  <section class="docs-section" id="docs">
+    <div class="container docs-container">
+      <div class="docs-header">
+        <i data-lucide="terminal" class="docs-header-icon"></i>
+        <h2>GitRepoMind Documentation</h2>
+        <p>A comprehensive technical guide to configuring, using, and integrating GitRepoMind into your developer environment.</p>
+      </div>
+
+      <!-- DOC SECTION: Core Workflow -->
+      <div class="doc-card">
+        <h3>1. Getting Started & Initialization</h3>
+        <p>Once you install `gitrepomind` via Homebrew, navigate to the root directory of any Git repository in your terminal and initialize the logical coupling database:</p>
+        
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind init</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+        <p class="info-note">
+          <strong>What happens under the hood?</strong> This command walks your Git commit history from oldest to newest, diffs commits in parallel using a thread pool, creates logical coupling relationships, and persists a compact graph in <code>.git/gitrepomind/graph.redb</code>.
+        </p>
+      </div>
+
+      <!-- DOC SECTION: Querying -->
+      <div class="doc-card">
+        <h3>2. Getting Suggestions (`remind`)</h3>
+        <p>Query logical coupling recommendations based on your current workspace files. GitRepoMind computes a directed confidence probability by default:</p>
+        
+        <h4>A. Suggest from Uncommitted Changes (Staged + Unstaged)</h4>
+        <p>Use this as a pre-flight checklist before finishing any coding task to catch missing updates:</p>
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind remind --uncommitted</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+
+        <h4>B. Suggest from Staged (Indexed) Changes Only</h4>
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind remind --staged</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+
+        <h4>C. Suggest for a Specific File</h4>
+        <p>Find which files are historically tied to a specific file (returns the top 5 candidates):</p>
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind remind -f src/main.rs -k 5</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+
+        <h4>D. Optional Symmetric Normalization</h4>
+        <p>If you want to suppress "hub" files (global constants or central routers that change in almost every commit) and only focus on tightly symmetric co-changes, use the <code>--symmetric</code> flag:</p>
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind remind -f src/main.rs -k 5 --symmetric</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+      </div>
+
+      <!-- DOC SECTION: Explain -->
+      <div class="doc-card">
+        <h3>3. Reviewing Historical Evidence (`explain`)</h3>
+        <p>If a reminder seems surprising, inspect the exact historical evidence behind why GitRepoMind considers those files to be coupled:</p>
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind explain -f src/main.rs -t src/cli.rs</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+        <p><strong>Example Output:</strong></p>
+        <div class="code-output-block">
+<pre>Relationship Score: 100%
+Observed Together:  3 commits
+Last Seen:          yesterday (commit efb1d1f)
+
+Recent commits where both files changed together:
+  efb1d1f Update explain command header to clarify ambiguous commit heading
+  2c00433 Configure git2 with vendored-openssl for cross-compilation
+  3adadbc Initial commit with GitRepoMind source files</pre>
+        </div>
+      </div>
+
+      <!-- DOC SECTION: Hook Automation -->
+      <div class="doc-card">
+        <h3>4. Automate Background Syncing (`install-hooks`)</h3>
+        <p>Keep your coupling graph completely up-to-date in the background without lag. Run this inside your repository to register Git hooks:</p>
+        <div class="code-block-wrapper">
+          <pre><code>gitrepomind install-hooks</code></pre>
+          <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+        </div>
+        <p class="info-note">
+          This command appends a background-running <code>gitrepomind sync</code> trigger to your local repository's <code>post-commit</code>, <code>post-merge</code>, and <code>post-checkout</code> hooks. It operates in parallel and yields immediately, adding <strong>zero delay</strong> to your standard git commands.
+        </p>
+      </div>
+
+      <!-- DOC SECTION: AI Coding Assistant Integration (Agent Skill) -->
+      <div class="doc-card accent-card">
+        <div class="accent-badge"><i data-lucide="sparkles"></i> AI Superpower</div>
+        <h3>5. AI Coding Assistant Skill Integration</h3>
+        <p>Since your source codebase is kept private, you can feed GitRepoMind instructions directly into AI coding tools (Cursor, Claude, Roo Code, Cline) as an **Agent Skill**. When an agent works on your code, it runs the CLI commands locally in your workspace CWD to gather context and perform pre-commit audits.</p>
+        
+        <p class="skill-intro"><strong>How to configure AI tools to use GitRepoMind:</strong></p>
+
+        <!-- Cursor Settings Guide -->
+        <div class="guide-item">
+          <div class="guide-badge">Cursor / Windsurf</div>
+          <ol>
+            <li>Navigate to <strong>Settings</strong> > <strong>Features</strong> > <strong>MCP</strong>.</li>
+            <li>Click <strong>+ Add New MCP Tool</strong>.</li>
+            <li>Configure:
+              <ul>
+                <li><strong>Name</strong>: <code>gitrepomind</code></li>
+                <li><strong>Type</strong>: <code>command</code></li>
+                <li><strong>Command</strong>: <code>gitrepomind serve</code> (starts stdio-based MCP server)</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Agent prompt guide -->
+        <div class="guide-item">
+          <div class="guide-badge">Roo Code / Cline / Agent Prompts (Recommended)</div>
+          <p>Instruct your AI Agent to act on your workspace by copying this directive into your system instructions or custom rules:</p>
+          <div class="code-block-wrapper">
+<pre style="white-space: pre-wrap; font-size: 0.8rem;">When writing code, proactively use `gitrepomind remind -f <file>` to gather surrounding file coupling context. Before presenting changes, run `gitrepomind remind --uncommitted` to verify no related files (like tests or specs) were overlooked.</pre>
+            <button class="code-copy-btn" onclick="copyCode(this)"><i data-lucide="copy"></i></button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -172,7 +289,7 @@
 
     // Copy Quick Start Tap Command
     function copyTapCommand() {
-      const commandText = "brew tap Veventii/veventii-tools";
+      const commandText = "brew tap Veventii/veventii-tools && brew install gitrepomind";
       navigator.clipboard.writeText(commandText).then(() => {
         const copyIcon = document.getElementById("copy-icon");
         copyIcon.setAttribute("data-lucide", "check");
@@ -188,6 +305,24 @@
     // Copy specific tool install command
     function copyInstallCommand(text, btnElement) {
       navigator.clipboard.writeText(text).then(() => {
+        const icon = btnElement.querySelector("i");
+        icon.setAttribute("data-lucide", "check");
+        btnElement.classList.add("copied");
+        lucide.createIcons();
+
+        setTimeout(() => {
+          icon.setAttribute("data-lucide", "copy");
+          btnElement.classList.remove("copied");
+          lucide.createIcons();
+        }, 2000);
+      });
+    }
+
+    // Copy block level code snippets
+    function copyCode(btnElement) {
+      const wrapper = btnElement.closest(".code-block-wrapper");
+      const code = wrapper.querySelector("code").innerText;
+      navigator.clipboard.writeText(code).then(() => {
         const icon = btnElement.querySelector("i");
         icon.setAttribute("data-lucide", "check");
         btnElement.classList.add("copied");
