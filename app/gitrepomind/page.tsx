@@ -79,6 +79,16 @@ export default function GitRepoMindDocs() {
                   Use this as a pre-flight checklist before finishing any coding task to catch missing updates:
                 </p>
                 <InstallCommand command="gitrepomind remind --uncommitted" />
+                <div className="mt-3 rounded-lg border bg-zinc-950 font-mono text-xs p-4 text-emerald-400 leading-relaxed overflow-x-auto shadow-inner">
+                  <pre>{`Detected:
+  src/main.rs
+
+Suggested:
+   80% src/cli.rs
+   60% src/graph.rs
+   40% Cargo.toml
+   20% README.md`}</pre>
+                </div>
               </div>
 
               <div>

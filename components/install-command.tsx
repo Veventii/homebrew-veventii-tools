@@ -13,19 +13,46 @@ export function InstallCommand({ command }: { command: string }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const renderCommand = (cmd: string) => {
+    const parts = cmd.split(" ");
+    return parts.map((part, index) => {
+      let className = "text-zinc-300"; // default off-white
+
+      if (part.startsWith("-")) {
+        className = "text-[#4ade80]"; // neon green for flags
+      } else if (part === "&&" || part === "||" || part === "|") {
+        className = "text-pink-400 font-semibold"; // pink for shell operators
+      } else if (part.includes("/") || part.includes("\\") || part.includes(".") || part.startsWith("\"") || part.endsWith("\"") || part.startsWith("&quot;") || part.endsWith("&quot;")) {
+        className = "text-amber-400/90"; // amber for paths, files, or quoted strings
+      } else if (/^\d+$/.test(part)) {
+        className = "text-purple-400"; // purple for digits
+      } else if (index === 0 || (index > 0 && parts[index - 1] === "&&")) {
+        className = "text-zinc-100 font-medium"; // brighter white for binary commands
+      }
+
+      return (
+        <span key={index} className={`${className} whitespace-nowrap`}>
+          {part}
+          {index < parts.length - 1 ? " " : ""}
+        </span>
+      );
+    });
+  };
+
   return (
-    <div className="flex items-center justify-between gap-3 px-3 py-2 rounded-lg border bg-muted/30 font-mono text-xs border-border text-zinc-300">
-      <div className="flex items-center gap-2 overflow-x-auto scrollbar-none">
-        <span className="text-zinc-500 select-none shrink-0">$</span>
-        <code className="text-emerald-400 font-medium whitespace-nowrap">{command}</code>
+    <div className="flex items-center justify-between gap-3 px-4 py-3 rounded-lg border border-zinc-800 bg-[#0d0d11] font-mono text-sm shadow-inner w-full max-w-full overflow-hidden select-all">
+      <div className="flex items-center gap-2 overflow-x-auto scrollbar-none max-w-full">
+        <code className="font-medium whitespace-nowrap">
+          {renderCommand(command)}
+        </code>
       </div>
       <Button
         variant="ghost"
         size="icon"
-        className="h-6 w-6 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 shrink-0"
+        className="h-7 w-7 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 shrink-0"
         onClick={handleCopy}
       >
-        {copied ? <Check className="h-3 w-3 text-emerald-400" /> : <Copy className="h-3 w-3" />}
+        {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
       </Button>
     </div>
   );
