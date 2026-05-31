@@ -134,14 +134,6 @@ export default function GitRepoMindDocs() {
                 </p>
                 <InstallCommand command="cargo install gitrepomind" />
               </div>
-
-              <div>
-                <h4 className="text-sm font-semibold mb-2">Or Compile from Local Source</h4>
-                <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-                  To build the latest master branch directly from the cloned repository source:
-                </p>
-                <InstallCommand command="cargo install --path ." />
-              </div>
             </div>
 
             <div className="border-t border-border pt-6 space-y-4">
