@@ -151,7 +151,7 @@ export default function Home() {
             <Badge variant="secondary" className="px-3 py-1 text-xs uppercase tracking-wider font-semibold border-purple-500/30 text-purple-400 bg-purple-500/5">
               Agentic AI Integration
             </Badge>
-            <h2 className="text-3xl md:text-5xl font-bold font-heading leading-tight text-zinc-100">
+            <h2 className="text-3xl md:text-5xl font-bold font-heading leading-tight text-zinc-900 dark:text-zinc-100">
               Ship Standalone Skills <br />
               <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
                 To Your Coding Agents
@@ -163,7 +163,7 @@ export default function Home() {
             </p>
             <p className="text-xs text-muted-foreground">
               Supported out-of-the-box by:{" "}
-              <span className="text-zinc-200 font-semibold">
+              <span className="text-zinc-800 dark:text-zinc-200 font-semibold">
                 Antigravity, Kiro, Codex, OpenCode, Cloud Code, Claude Desktop, and more.
               </span>
             </p>
@@ -172,17 +172,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* GitRepoMind Skill Showcase */}
-            <Card className="relative overflow-hidden bg-zinc-950/60 border border-purple-500/20 p-6 flex flex-col justify-between group hover:border-purple-500/40 transition-all duration-300">
+            <Card className="relative overflow-hidden bg-card dark:bg-zinc-950/60 border border-purple-500/20 p-6 flex flex-col justify-between group hover:border-purple-500/40 transition-all duration-300">
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-purple-400" />
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <BrainCircuit className="h-5 w-5 text-purple-400" />
-                  <h3 className="text-lg font-bold text-zinc-100">GitRepoMind Skill</h3>
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">GitRepoMind Skill</h3>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Teaches your coding agent to query GitRepoMind's offline logical coupling database to predict related file co-changes and prevent overlooked updates before staging.
                 </p>
-                <div className="rounded-lg bg-[#0d0d11] border border-zinc-800 p-3 font-mono text-[11px] text-zinc-400 space-y-1">
+                <div className="rounded-lg bg-[#0d0d11] border border-zinc-800/80 dark:border-zinc-800 p-3 font-mono text-[11px] text-zinc-300 space-y-1">
                   <div className="text-purple-400 font-bold uppercase text-[9px] mb-1 select-none">Agent Query Flow</div>
                   <div>$ gitrepomind remind -f &lt;current_file&gt; -k 5</div>
                   <div className="text-[10px] text-zinc-500"># Fallback: Read public page or local INSTALL.md</div>
@@ -203,17 +203,17 @@ export default function Home() {
             </Card>
 
             {/* LocalCloud Skill Showcase */}
-            <Card className="relative overflow-hidden bg-zinc-950/60 border border-teal-500/20 p-6 flex flex-col justify-between group hover:border-teal-500/40 transition-all duration-300">
+            <Card className="relative overflow-hidden bg-card dark:bg-zinc-950/60 border border-teal-500/20 p-6 flex flex-col justify-between group hover:border-teal-500/40 transition-all duration-300">
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-teal-500 to-teal-400" />
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Server className="h-5 w-5 text-teal-400" />
-                  <h3 className="text-lg font-bold text-zinc-100">LocalCloud Skill</h3>
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">LocalCloud Skill</h3>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Enables your agent to explore process statuses, warm up cold-started applications, restart crashed daemons, or query dev logs automatically.
                 </p>
-                <div className="rounded-lg bg-[#0d0d11] border border-zinc-800 p-3 font-mono text-[11px] text-zinc-400 space-y-1">
+                <div className="rounded-lg bg-[#0d0d11] border border-zinc-800/80 dark:border-zinc-800 p-3 font-mono text-[11px] text-zinc-300 space-y-1">
                   <div className="text-teal-400 font-bold uppercase text-[9px] mb-1 select-none">Agent Query Flow</div>
                   <div>$ localcloudctl ls</div>
                   <div className="text-[10px] text-zinc-500"># Fallback: Read public page or local INSTALL.md</div>
