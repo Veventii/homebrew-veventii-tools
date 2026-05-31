@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/gitrepomind-og.png",
         width: 1200,
         height: 630,
         alt: "GitRepoMind - Offline Code Intelligence",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GitRepoMind - Local-first Code Intelligence Engine",
     description: "An offline, Rust-powered code intelligence engine that learns your repository's human workflow history to predict logical co-changes.",
-    images: ["/og-image.png"],
+    images: ["/gitrepomind-og.png"],
   },
   alternates: {
     canonical: "https://veventii.github.io/homebrew-veventii-tools/gitrepomind/",
