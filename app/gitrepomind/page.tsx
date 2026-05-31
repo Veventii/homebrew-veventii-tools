@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, BrainCircuit, Sparkles, AlertCircle, Copy, Terminal, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { InstallCommand } from "@/components/install-command";
+
+export const metadata: Metadata = {
+  title: "GitRepoMind - Local-first Code Intelligence Engine",
+  description: "Offline, Rust-powered logical coupling and file co-change prediction engine for Git repositories. Learn co-changes from your commit history and prevent forgotten updates.",
+  openGraph: {
+    title: "GitRepoMind - Local-first Code Intelligence Engine",
+    description: "An offline, Rust-powered code intelligence engine that learns your repository's human workflow history to predict logical co-changes and warn you about overlooked files before you commit.",
+    url: "https://veventii.github.io/homebrew-veventii-tools/gitrepomind/",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GitRepoMind - Offline Code Intelligence",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GitRepoMind - Local-first Code Intelligence Engine",
+    description: "An offline, Rust-powered code intelligence engine that learns your repository's human workflow history to predict logical co-changes.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://veventii.github.io/homebrew-veventii-tools/gitrepomind/",
+  },
+};
 
 export default function GitRepoMindDocs() {
   return (

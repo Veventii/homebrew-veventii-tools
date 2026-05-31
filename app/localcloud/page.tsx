@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Server, Cpu, AlertCircle, Copy, Terminal, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { InstallCommand } from "@/components/install-command";
+
+export const metadata: Metadata = {
+  title: "LocalCloud - Lightweight Dev Proxy & Process Orchestrator",
+  description: "Lightweight development proxy and process manager with lazy-loading and cold starts for zero-memory local multi-service development setups.",
+  openGraph: {
+    title: "LocalCloud - Lightweight Dev Proxy & Process Orchestrator",
+    description: "A lightweight development proxy and process manager that sleeps idle services and spins them up dynamically on request for zero-memory local setups.",
+    url: "https://veventii.github.io/homebrew-veventii-tools/localcloud/",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "LocalCloud - Zero-Memory Orchestration",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LocalCloud - Lightweight Dev Proxy & Process Orchestrator",
+    description: "A lightweight development proxy and process manager that sleeps idle services and spins them up dynamically on request for zero-memory local setups.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://veventii.github.io/homebrew-veventii-tools/localcloud/",
+  },
+};
 
 export default function LocalCloudDocs() {
   return (
