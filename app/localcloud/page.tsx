@@ -31,7 +31,7 @@ export default function LocalCloudDocs() {
           LocalCloud <span className="bg-gradient-to-r from-teal-400 to-purple-400 bg-clip-text text-transparent">Documentation</span>
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          Complete technical reference, command guides, and background daemon configuration instructions for LocalCloud—the local development orchestrator.
+          A lightweight development proxy and process manager that sleeps idle services and spins them up dynamically on request for zero-memory local setups.
         </p>
       </div>
 

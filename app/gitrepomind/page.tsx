@@ -31,7 +31,7 @@ export default function GitRepoMindDocs() {
           GitRepoMind <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">Documentation</span>
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          Complete technical reference, user manual, and integration instructions for GitRepoMind—the local-first Git history logical coupling engine.
+          An offline, Rust-powered code intelligence engine that learns your repository's human workflow history to predict logical co-changes and warn you about overlooked files before you commit.
         </p>
       </div>
 
