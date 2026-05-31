@@ -107,21 +107,57 @@ export default function GitRepoMindDocs() {
         <Card className="border-border bg-card/60 backdrop-blur-md">
           <CardHeader>
             <CardTitle className="text-xl flex items-center gap-2">
-              <span className="text-purple-400 font-mono text-sm">01.</span> Getting Started & Initialization
+              <span className="text-purple-400 font-mono text-sm">01.</span> Introduction & Installation
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Once you install <code>gitrepomind</code> via Homebrew, navigate to the root directory of any Git repository in your terminal and initialize the logical coupling database:
+              GitRepoMind is packaged as a single standalone Rust binary CLI. You can install it on your system using one of the methods below.
             </p>
-            <InstallCommand command="gitrepomind init" />
-            <Alert className="bg-purple-500/5 border-purple-500/20 text-purple-200">
-              <AlertCircle className="h-4 w-4 text-purple-400" />
-              <AlertTitle className="text-purple-400">Under the Hood</AlertTitle>
-              <AlertDescription className="text-xs leading-relaxed text-muted-foreground mt-1">
-                This command walks your Git commit history from oldest to newest, diffs commits in parallel using a thread pool, creates logical coupling relationships, and persists a compact graph in <code>.git/gitrepomind/graph.redb</code>.
-              </AlertDescription>
-            </Alert>
+
+            <div className="space-y-4 pt-2">
+              <div>
+                <h4 className="text-sm font-semibold mb-2">Install via Homebrew (Recommended)</h4>
+                <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+                  First tap the official Veventii tap repository, then install the pre-compiled binary:
+                </p>
+                <div className="space-y-2">
+                  <InstallCommand command="brew tap Veventii/veventii-tools" />
+                  <InstallCommand command="brew install gitrepomind" />
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-sm font-semibold mb-2">Install from Crates.io</h4>
+                <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+                  If you have Rust and Cargo installed, compile and install the stable release directly from Crates.io:
+                </p>
+                <InstallCommand command="cargo install gitrepomind" />
+              </div>
+
+              <div>
+                <h4 className="text-sm font-semibold mb-2">Or Compile from Local Source</h4>
+                <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+                  To build the latest master branch directly from the cloned repository source:
+                </p>
+                <InstallCommand command="cargo install --path ." />
+              </div>
+            </div>
+
+            <div className="border-t border-border pt-6 space-y-4">
+              <h4 className="text-sm font-semibold">Repository Initialization</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Once installed, navigate to the root directory of any Git repository in your terminal and initialize the logical coupling database:
+              </p>
+              <InstallCommand command="gitrepomind init" />
+              <Alert className="bg-purple-500/5 border-purple-500/20 text-purple-200 mt-4">
+                <AlertCircle className="h-4 w-4 text-purple-400" />
+                <AlertTitle className="text-purple-400">Under the Hood</AlertTitle>
+                <AlertDescription className="text-xs leading-relaxed text-muted-foreground mt-1">
+                  This command walks your Git commit history from oldest to newest, diffs commits in parallel using a thread pool, creates logical coupling relationships, and persists a compact graph in <code>.git/gitrepomind/graph.redb</code>.
+                </AlertDescription>
+              </Alert>
+            </div>
           </CardContent>
         </Card>
 
