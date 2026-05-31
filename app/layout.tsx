@@ -22,7 +22,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Veventii PVT LTD - Innovative Software Products',
   description: 'Building innovative software products that solve real problems and enhance productivity. Discover our diverse portfolio of tools and solutions.',
-  metadataBase: new URL('https://veventii.com'),
+  metadataBase: new URL('https://Veventii.com'),
   keywords: 'software, products, innovation, technology, productivity, tools, solutions, SaaS',
   authors: [{ name: 'Veventii PVT LTD' }],
   creator: 'Veventii PVT LTD',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://veventii.com',
+    url: 'https://Veventii.com',
     title: 'Veventii PVT LTD - Innovative Software Products',
     description: 'Building innovative software products that solve real problems and enhance productivity.',
     siteName: 'Veventii',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   alternates: {
-    canonical: 'https://veventii.com',
+    canonical: 'https://Veventii.com',
   },
 };
 

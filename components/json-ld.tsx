@@ -7,8 +7,8 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Veventii PVT LTD",
-    url: "https://veventii.com",
-    logo: "https://veventii.com/veventii-logo.svg",
+    url: "https://Veventii.com",
+    logo: "https://Veventii.com/veventii-logo.svg",
     description:
       "Building innovative software products that solve real problems and enhance productivity.",
     foundingDate: "2024",
@@ -25,7 +25,7 @@ export function JsonLd() {
       "@type": "ContactPoint",
       telephone: "+94-XXX-XXX-XXX",
       contactType: "customer service",
-      email: "contact@veventii.com",
+      email: "contact@Veventii.com",
       availableLanguage: "English",
     },
     sameAs: [
@@ -73,7 +73,7 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Veventii",
-    url: "https://veventii.com",
+    url: "https://Veventii.com",
     description:
       "Building innovative software products that solve real problems and enhance productivity.",
     publisher: {
@@ -84,7 +84,7 @@ export function JsonLd() {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://veventii.com/search?q={search_term_string}",
+        urlTemplate: "https://Veventii.com/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -98,25 +98,25 @@ export function JsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://veventii.com",
+        item: "https://Veventii.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Products",
-        item: "https://veventii.com/products",
+        item: "https://Veventii.com/products",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "About",
-        item: "https://veventii.com/about",
+        item: "https://Veventii.com/about",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: "Contact",
-        item: "https://veventii.com/contact",
+        item: "https://Veventii.com/contact",
       },
     ],
   };

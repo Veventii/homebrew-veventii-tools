@@ -31,7 +31,7 @@ export function Footer() {
                 <Twitter className="h-4 w-4" />
               </Link>
               <Link
-                href="mailto:contact@veventii.com"
+                href="mailto:contact@Veventii.com"
                 className="text-muted-foreground hover:text-primary"
               >
                 <Mail className="h-4 w-4" />
@@ -96,7 +96,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://startuplab.veventii.com"
+                  href="https://startuplab.Veventii.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary"

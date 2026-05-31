@@ -51,12 +51,12 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://veventii.com"
+            href="https://Veventii.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center gap-0.5"
           >
-            veventii.com <ArrowUpRight className="h-3 w-3" />
+            Veventii.com <ArrowUpRight className="h-3 w-3" />
           </a>
         </div>
 
@@ -98,13 +98,13 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href="https://veventii.com"
+              href="https://Veventii.com"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               onClick={() => setIsOpen(false)}
             >
-              veventii.com
+              Veventii.com
             </a>
           </div>
         </div>
