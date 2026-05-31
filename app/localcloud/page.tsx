@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://veventii.github.io/homebrew-veventii-tools/og-image.png",
         width: 1200,
         height: 630,
         alt: "LocalCloud - Zero-Memory Orchestration",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LocalCloud - Lightweight Dev Proxy & Process Orchestrator",
     description: "A lightweight development proxy and process manager that sleeps idle services and spins them up dynamically on request for zero-memory local setups.",
-    images: ["/og-image.png"],
+    images: ["https://veventii.github.io/homebrew-veventii-tools/og-image.png"],
   },
   alternates: {
     canonical: "https://veventii.github.io/homebrew-veventii-tools/localcloud/",
